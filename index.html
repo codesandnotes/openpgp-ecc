@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenPGP.js ECC</title>
+
+    <link href="index.css" rel="stylesheet">
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/openpgp/dist/openpgp.min.js"></script>
+
+    <script>
+        // Initialize openpgp worker
+        window.openpgp.initWorker({path: 'node_modules/openpgp/dist/openpgp.worker.min.js'});
+    </script>
+
+    <script src="index.js"></script>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Alice</th>
+            <th>Encrypted</th>
+            <th>Bob</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="side"><textarea id="alice-write"></textarea></td>
+            <td class="middle"><textarea id="alice-encrypted"></textarea></td>
+            <td class="side"><textarea id="bob-read"></textarea></td>
+        </tr>
+        <tr>
+            <td><button id="alice-send" type="button">SEND ></button></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><textarea id="alice-read"></textarea></td>
+            <td><textarea id="bob-encrypted"></textarea></td>
+            <td><textarea id="bob-write"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><button id="bob-send" type="button">< SEND</button></td>
+        </tr>
+    </tbody>
+</table>
+<div id="alice-com"></div>
+<div id="bob-com"></div>
+</body>
+</html>

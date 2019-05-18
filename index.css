@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+
+textarea {
+    height: 120px;
+    width: 95%;
+}
+
+td.side {
+    width: 30%;
+}
+
+td.middle {
+    width: 40%;
+}
